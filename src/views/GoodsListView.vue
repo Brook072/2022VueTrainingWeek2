@@ -16,10 +16,9 @@ axios
   })
   .then((res) => {
     productsList.value = Object.values(res.data.products);
-    console.log(productsList.value);
   })
   .catch((res) => {
-    console.log(res);
+    alert(res.data.message);
   });
 
 if (token === null) {

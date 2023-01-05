@@ -20,13 +20,12 @@ function signInPost() {
       password: password.value,
     })
     .then((res) => {
-      console.log(res);
       localStorage.setItem("token", res.data.token);
       alert(res.data.message);
       router.push("/");
     })
     .catch((res) => {
-      console.log(res);
+      alert(res.data.message);
     });
 }
 </script>
